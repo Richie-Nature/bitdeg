@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "layout.scss";
+@import "bootstrap.scss";
+@import "theme.scss";
+
+@font-face {
+  font-family: "Trueno";
+  src: url("./assets/fonts/Trueno/Trueno.ttf") format("truetype");
+}
+
+$enable-negative-margins: true;
+
+body {
+  font-family: "Trueno";
+  padding: 0;
+  margin: 0;
+  font-size: 0.875em;
+  height: 100vh;
+  &.dark-theme {
+    background-color: $dark-page-color !important;
+    color: $dark-text-color !important;
+    header {
+      background-color: $dark-page-color;
+    }
+  }
+  &.light-theme {
+    background-color: $light-page-color !important;
+    color: $light-text-color !important;
+    header {
+      background-color: $light-page-color;
+    }
+  }
+}
+
+/* Keep footer at bottom */
+#bit {
+  min-height: 100%;
+  position: relative;
+  & > .container {
+    padding-bottom: 120px !important;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    right: 10%;
+    height: 60px; 
+  }
+}
+/* end */
+
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  &:hover {
+    color: currentColor;
+  }
+}
+
+//UTILITIES//
+.text-color {
+  color: $text-color;
+}
+.text-mono {
+  color: $text-monochrome;
+}
+
+.pill-button {
+  border-radius: 30px !important;
+}
+///
